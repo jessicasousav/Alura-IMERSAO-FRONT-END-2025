@@ -1,0 +1,21 @@
+/* COMENTARIOS  CSS */ 
+/* para que o arquivo CSS funcione no arquivo HTML, é necessário linkar eles */
+
+/* consigo escolher cores pelos sites:
+    - adobe color
+    - coolors.co
+    - color hunt
+    - color tool */
+
+
+body {
+    background-color: #1C1C1C; /* cor do fundo */
+    color: #4F4F4F; /* cor do texto*/
+}
+
+
+strong {
+    color: rgb(19, 131, 168);    
+}
+
+/* todas as vezes que eu indicar um strong no html, as palavras terao essa cor definida*/
