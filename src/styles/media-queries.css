@@ -30,6 +30,15 @@
         margin-right: 5px;
       }
 
+    .disclaimer-premium {
+        flex-direction:column;
+    }
+
+    .button {
+        align-self: center; 
+        padding: 10px;   
+    }
+
       
 }
 
@@ -70,6 +79,15 @@
         width: 80%;
     }
 
+    .disclaimer-premium {
+        flex-direction:column;
+    }
+
+    .button {
+        align-self: center; 
+        padding: 10px;   
+    }
+
 }
 
 
@@ -94,6 +112,15 @@
   
     .offer__scroll-container {
       overflow-y: visible;
+    }
+
+    .disclaimer-premium {
+        flex-direction:column;
+    }
+
+    .button {
+        align-self: center; 
+        padding: 10px;   
     }
   
   }
