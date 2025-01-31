@@ -1,22 +1,80 @@
 /* 1015px é a largura de um celular um pouco menor */
-@media screen and (max-width: 1015px) {
+
+@media screen and (min-width: 1016px) and (max-width: 1140px) {
+    .header__search {
+      display: none;
+      width: auto;
+      display: none;
+}
+
+    .offer__list-item {
+    grid-template-columns: 1fr 1fr 1fr
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1015px) {
+    .header__search {
+        display: none;
+        width: auto;
+    }
+    
     .offer__list-item {
     /*essa classe é a que carrega quantas colunas o display:grid carrega na tela*/
         grid-template-columns: 1fr 1fr;
         /*então se a tela tiver esse temanho maximo, ele vai mostrar apenas 2 colunas de cards*/   
     }
-}
 
-@media screen and (min-width: 1016px) and (max-width: 1140px) {
-    .header__search {
+    .header__login .subscribe {
+        font-size: 12px;
+        padding: 10px;
+        margin-right: 5px;
+      }
+
       
-      width: auto !important;
-      display: none;
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .header__search {
+        display: none;
+        width: auto;
+    }
+    
+    .offer__list-item {
+    /*essa classe é a que carrega quantas colunas o display:grid carrega na tela*/
+        grid-template-columns: 1fr;
+        /*então se a tela tiver esse temanho maximo, ele vai mostrar apenas 2 colunas de cards*/   
+    }
+
+    .header__login .subscribe {
+        font-size: 12px;
+        padding: 10px;
+        margin-right: 5px;
+      }
+    
+    .header__navigation {
+        margin-top: 0;
+    }
+    
+    .sidebar {
+        position:relative;
+        margin: auto;
+        width: 90%;
+    }
+    .library {
+        display: none;
+    }
+
+    
+    .main-container {
+        margin: auto;
+        width: 80%;
+    }
+
 }
 
 
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 359px) {
     .playlist {
       display: none;
     }
