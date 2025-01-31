@@ -1,0 +1,15 @@
+INSTALANDO A PASTA PARA O REACT
+
+1- abrir o BASH (pesquisa no search do computador)
+
+2- digita o seguinte comando para CRIAR o PROJETO:
+    npx create-react-app spotify-react
+
+npx é o executor do npm, usa o npx para não precisar baixar o pacote de projeto react, assim ele já cria o projeto
+
+spotify-react é o nome da pasta que ele vai criar
+
+3- ele vai perguntar se pode baixar e, se sim, ele vai baixar os arquivos necessarios
+
+4- digita:
+    cd spotify-react/

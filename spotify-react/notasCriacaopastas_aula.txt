@@ -1,0 +1,5 @@
+1 - criou a pasta Header para separar todos os componentes do header, criando arquivo js e css
+
+2 - copiou a pasta assets do SPOTIFY-IMERSAO-ALURA para o scr de SPOTIFY-REACT
+
+3 - tudo que tinha no App.css foi apagado e apenas colocou a cor do fundo

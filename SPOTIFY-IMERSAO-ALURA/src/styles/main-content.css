@@ -1,0 +1,374 @@
+/* arquivo do conteudo de estilos principal da pagina */
+
+/* HEADER */
+/*posicionando ao lado do sidebar*/
+.main-container {
+    max-width: 80vw; /* largura maxima dessa classe, largura de 80% dentro da viewport */
+    height: 100vh; /* ocupa 100% do espaço de altura da tela */
+    margin-left: 320px; /* joga pra direita, deixando a margem na esquerda */
+    margin-right: 56px; /* joga pra esquerda, deixando a margem na direita */
+}
+
+
+/*criando o fundo da barra e ajustando seu tamanho, e justificando e centralizando as informações escritas*/
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #121212;
+}
+
+
+.header__navigation .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*afastando a seta da esquerda da seta da direita*/
+.header__navigation .navigation .arrow-left {
+    margin-right: 1.25rem; /*o rem não é um valor estático como o pixel, ele é uma unidade relativa*/
+
+}
+
+
+/*deixando os botões redondinhos e com fundo preto*/
+.arrow-left, .arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--bg-icon); 
+    background-color: var(--bg-arrow-color);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+
+.header__login {
+    display: flex;
+    align-items: center;
+}
+
+/*deixando o fundo da barra de pesquisa cinza e arredondado*/
+.header__search {
+    display: flex;
+    align-items: center;
+    width: 364px;
+    height: 48px;
+    margin-left: 8px;
+    background-color: #242424;
+    border-radius: 500px;
+    border: 1px solid transparent;
+}
+
+/*ajustando a imagem da lupa*/
+.header__search img {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+/*ajustando o input*/
+.header__search input {
+    background: transparent; /*tirando o fundo branco padrao do input*/
+    border: none;
+    padding: 0px 100px 0 12px; /*posicionando as palavras de pesquisa*/
+    color: #fff; /*letra de pequisa branca*/
+    text-overflow: ellipsis; /* quando o texto é mt grande e não quer mostrar todo, ele acrescenta "..."*/
+    overflow: hidden; /* precisa do overflow apos usar o text-overflow. O hidden nao vai estourar o campo, colocando os 3 pontinhos */
+    white-space: nowrap; /* não quebra o texto no input colocando em varios paragrafos da busca, coloca tudo numa linha só */
+    outline: none; /* tira a borda do texto do input */
+}
+
+/*posicionando e ajustando o "inscreva-se"*/
+.header__login .subscribe {
+    border: none;
+    color: #a7a7a7;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    margin-right: 32px;
+}
+
+/*ajustando e arredondando o "Entrar"*/
+.header__login .login {
+    width: 100px;
+    height: 48px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 40px;
+}
+
+
+
+/*DESAFIO*/
+.playlist-container {
+   padding-top: 16px;
+   margin: 10px;
+   height: 68vh;
+   background-color: #121212;
+   border-radius: 10px;
+}
+
+
+.playlist {
+    margin: 24px;
+}
+
+/*uso de # pois é um id*/
+.playlist #greeting { 
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+
+.playlist .greeting-subtitle {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* SCROLL */
+/* ativando o scroll na tela */
+.offer__scroll-container {
+    max-height: 43vh; /*usado para responsividade*/
+    margin: 24px;
+    overflow-y: auto; /*vai mostrar tudo que esta no eixo y*/
+}
+
+
+/*diminuindo o tamanho da barra de scroll*/
+.offer__scroll-container::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* deixando o fundo da barra de scroll transparente*/
+.offer__scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+/* FIM DO SCROLL */
+
+
+/*centralizando itens*/
+.offer__list-item {
+    display: grid; /*divide o conteudo em grades*/
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*se separa em 5 colunas (frações) e cada card separa em uma*/
+    grid-gap: 16px; /*separa cada grade com um espaço de 16 px*/
+    gap: 16px; /*grid-gap e gap fazem a mesma coisa*/
+    margin-bottom: 16px;
+    
+/*CODIGO COM JS CALCULANDO OS CARDS POR COLUNA*/
+    display: grid;
+    gap: 16px;
+    grid-gap: 32px;
+    margin: 0 auto;
+}
+
+/* POSITION */
+/* principais são static, relative, absolute, fixed, e sticky. */
+
+.cards {
+    position: relative; 
+    /* relative:
+    Comportamento em relação a si mesmo: O elemento é posicionado em relação à sua posição original.
+    Mantém espaço original: O espaço original que o elemento ocuparia não é alterado, mas você pode movê-lo com top, right, bottom ou left. */
+    width: 220px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cards span {
+    padding: 16px;
+    position: absolute;
+     /* absolute:
+    Comportamento em relação ao ancestral posicionado mais próximo ou ao elemento raiz (se nenhum ancestral estiver posicionado).
+    Remove do fluxo normal: O elemento é removido do fluxo normal do documento, o que significa que outros elementos agem como se o elemento não estivesse presente. */
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/*COLOR CARDS*/
+.card1 {
+    background-color: rgb(0, 100, 80);
+}   
+.card2 {
+    background-color: rgb(132, 0, 231);
+}
+.card3 {
+    background: rgb(30, 50, 100);
+}
+.card4 {
+    background: rgb(140, 25, 50);
+}
+.card5 {
+    background: rgb(232, 17, 91);
+}
+.card6 {
+    background: rgb(83, 122, 161);
+}
+.card7 {
+    background: rgb(142, 102, 172);
+}
+.card8 {
+    background: rgb(20, 138, 8);
+}
+.card9 {
+    background: rgb(30, 50, 100);
+}
+.card10 {
+    background: rgb(233, 20, 41);
+}
+.card11 {
+    background: rgb(80, 55, 80);
+}
+.card12 {
+    background: rgb(216, 64, 0);
+}
+.card13 {
+    background: rgb(186, 93, 7);
+}
+.card14 {
+    background: rgb(0, 30, 80);
+}
+.card15 {
+    background: rgb(60, 30, 80);
+}
+/*FIM COLOR CARDS*/
+
+/*colocando um fundo colorido pra cada imagem e rotacionando elas dentro da frame de cada uma*/
+.offer__list-item img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 107px;
+    transform: rotate(25deg) translate(18%, -2%);
+}
+
+/*CARD ARTISTA*/
+
+.artist {
+    --column-count: 5;
+    --grid-gap: 24px;
+    --min-container-width: 372px;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-container {
+    grid-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-width: 372px;
+}
+
+.artist-card {
+    background: #181818;
+    border-radius: 8px;
+    -ms-flex: 1;
+    flex: 1;
+    isolation: isolate;
+    padding: 16px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.artist-card:hover {
+    background-color: #252525;
+}
+
+.card-img {
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.artist-img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-height: 62px;
+    text-decoration: none;
+}
+
+.card-text a {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.artist-name {
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    padding-block-end: 8px;
+}
+
+.artist-categorie {
+    color: #6a6a6a;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.play {
+    position: relative;
+}
+
+
+/*adicionando bolinha verde de play quando pesquisa o artista*/
+.play .fa-play {
+    position: absolute;
+    right: 10px;
+    top: 120px;
+    padding: 18px;
+    background-color: #1db954;
+    border-radius: 100%;
+    font-size: 14px;
+    opacity: 0; /*deixa ela transparente pra so parecer quando passa o mouse por cima*/
+    transition: all ease 0.4s; /*faz uma transição movendo ela pro lado*/
+    
+}
+
+.artist-card:hover .play .fa-play {
+    opacity: 1;
+    transform: translateY(-20px); /*deixa de mover ela pro lado e passa a mover no eixo Y*/
+}
+
+.play .fa-play:hover {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.result-artist {
+    padding: 20px 40px;
+}

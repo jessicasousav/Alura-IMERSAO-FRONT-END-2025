@@ -1,0 +1,44 @@
+1 - Inicialmente criamos essa pasta da seguinte forma:
+
+    INSTALANDO A PASTA PARA O REACT
+
+    - abrir o BASH (pesquisa no search do computador)
+
+    - digita o seguinte comando para CRIAR o PROJETO:
+        npx create-react-app spotify-react
+
+    npx é o executor do npm, usa o npx para não precisar baixar o pacote de projeto react, assim ele já cria o projeto
+
+    spotify-react é o nome da pasta que ele vai criar
+
+    - ele vai perguntar se pode baixar e, se sim, ele vai baixar os arquivos necessarios
+
+    - digita:
+        cd spotify-react/
+
+    - abrir vs code:
+        code .
+
+2 - na pasta spotify-react
+
+    - Geralmente vamos trabalhar na pasta src
+
+3 - em App.js digitamos o seguinte codigo no terminal:
+    		npm start
+
+    - esse codigo no terminal roda o codigo digitado no js
+
+4 - deu erro, então digitei no terminal:
+		npm config set legacy-peer-deps true
+
+5 - deu outro erro de web-vitals, digitei o terminal:
+		npm i web-vitals
+
+ - instalou web-vitals
+
+6 - no terminal:
+	npm start
+
+7 - funcionou
+
+    

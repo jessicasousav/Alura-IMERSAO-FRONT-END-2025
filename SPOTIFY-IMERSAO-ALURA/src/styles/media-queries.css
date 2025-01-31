@@ -1,0 +1,8 @@
+/* 1015px é a largura de um celular um pouco menor */
+@media screen and (max-width: 1015px) {
+    .offer__list-item {
+    /*essa classe é a que carrega quantas colunas o display:grid carrega na tela*/
+        grid-template-columns: 1fr 1fr;
+        /*então se a tela tiver esse temanho maximo, ele vai mostrar apenas 2 colunas de cards*/   
+    }
+}

@@ -1,0 +1,13 @@
+/* arquivo de variáveis */
+/* tudo que vai ser muito repetido será pre-codificado aqui */
+
+/* root é a raiz */
+:root {
+    /* FONT */
+    --font-dm-sans: "DM Sans", sans-serif;   
+    
+    /* COLORS */
+    --bg-icons: #131313;
+    --bg-arrow-color: rgba(0, 0, 7); 
+}
+
