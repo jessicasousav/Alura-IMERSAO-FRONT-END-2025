@@ -1,0 +1,13 @@
+o arquivo node_modules do React é muito grande para ser committed e publicado, então precisamos criar um arquivo no root chamado:
+
+.gitignore
+
+- nesse arquivo escrevemos:
+
+node_modules/
+
+- no terminal, digitamos:
+git rm -r --cached .
+git add .
+git commit -m "remove node_modules"
+git push
